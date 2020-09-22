@@ -1,0 +1,31 @@
+{
+  "name": "life-hacking",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "db:update": "git submodule update --remote vendors/database",
+    "build": "node build/database/index.js",
+    "clean": "rm -rf .asset-cache",
+    "serve": "rake run",
+    "predeploy": "npm run clean",
+    "deploy": "rake deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ourairyu/life-hacking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ourairyu/life-hacking/issues"
+  },
+  "homepage": "https://github.com/ourairyu/life-hacking#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "handie": "^1.0.8",
+    "js-yaml": "^3.14.0"
+  }
+}
